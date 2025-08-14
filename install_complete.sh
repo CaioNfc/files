@@ -409,3 +409,7 @@ echo "Se o ACR122U não foi detectado, conecte-o e execute:"
 echo "  sudo systemctl restart pcscd"
 echo "  sudo systemctl restart $SERVICE_NAME"
 echo
+echo -e "${GREEN}========================================${NC}"
+echo -e "${GREEN}  ✓ Iremos reiniciar o sistema"
+echo -e "${GREEN}========================================${NC}"
+reboot
