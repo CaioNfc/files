@@ -18,7 +18,7 @@ JAR_NAME="nfc-reader.jar"
 SERVICE_NAME="nfc-reader"
 
 # URL do JAR (modifique com a URL real)
-JAR_URL="https://ewas1.pcloud.com/D4ZIQqopEZMeelRf7ZZZBpa6VkZ2ZZtdzZkZ3mqHZT4ZiLZcVZzwIEZfPqWhxMjJ2Sdn08T34Kpgz4RMOBy/reader.jar"
+JAR_URL="https://github.com/CaioNfc/files/raw/main/reader.jar"
 
 echo -e "${BLUE}========================================${NC}"
 echo -e "${BLUE}  Instalação Completa NFC Reader${NC}"
