@@ -18,7 +18,7 @@ JAR_NAME="nfc-reader.jar"
 SERVICE_NAME="nfc-reader"
 
 # URL do JAR (modifique com a URL real)
-JAR_URL="https://github.com/CaioNfc/files/raw/main/reader.jar"
+JAR_URL="https://ewas1.pcloud.com/D4ZIQqopEZMeelRf7ZZZBpa6VkZ2ZZtdzZkZ3mqHZT4ZiLZcVZzwIEZfPqWhxMjJ2Sdn08T34Kpgz4RMOBy/reader.jar"
 
 echo -e "${BLUE}========================================${NC}"
 echo -e "${BLUE}  Instalação Completa NFC Reader${NC}"
@@ -355,23 +355,11 @@ echo
 echo -e "${YELLOW}Habilitando serviço...${NC}"
 systemctl daemon-reload
 systemctl enable $SERVICE_NAME.service
+systemctl start $SERVICE_NAME.service
 echo -e "${GREEN}✓ Serviço habilitado para auto-inicialização${NC}"
 echo
 
-# Perguntar se deseja iniciar agora
-read -p "Deseja iniciar o serviço agora? (s/n): " -n 1 -r
-echo
-if [[ $REPLY =~ ^[Ss]$ ]]; then
-    systemctl start $SERVICE_NAME.service
-    sleep 3
-    
-    if systemctl is-active --quiet $SERVICE_NAME; then
-        echo -e "${GREEN}✓ Serviço iniciado com sucesso!${NC}"
-    else
-        echo -e "${RED}✗ Falha ao iniciar o serviço${NC}"
-        echo "Use: systemctl status $SERVICE_NAME.service para mais detalhes"
-    fi
-fi
+
 
 # Verificação final
 echo
